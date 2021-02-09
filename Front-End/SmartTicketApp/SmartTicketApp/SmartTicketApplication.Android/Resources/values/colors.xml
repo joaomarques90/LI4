@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="launcher_background">#1A253F</color>
+    <color name="colorPrimary">#1A253F</color>
+    <color name="colorPrimaryDark">#1A253F</color>
+    <color name="colorAccent">#FF4081</color>
+</resources>
