@@ -1,0 +1,41 @@
+ORDEM DAS SCRIPTS
+
+1 - iQueue_Script_Criacao => (0 - DROP SCHEMA)
+
+2 - StoredProcedures
+	2.1 - Events_Triggers
+	2.2 - Guest
+	2.3 - Utilizador
+	2.4 - Funcionario
+	2.5 - Gerente
+	2.6 - Servicos
+	2.7 - Estatisticas
+
+3 - StoredFunctions
+	3.1 - Guest
+	3.2 - Utilizador
+	3.3 - Funcionario
+	3.4 - Gerente
+
+4 - StoredViews
+	4.1 - Tickets
+	4.2 - Estatisticas
+	4.3 - Servicos
+	4.4 - Utilizador
+	4.5 - Funcionario
+	4.6 - Gerente
+
+5 - StoredProceduresFunctionConvert
+
+6 - iQueue_Script_populacao_utilizador
+
+7 - Ticket20-05-2020_16-48
+8 - Ticket29-06-2020_19-24
+
+9 - UPDATE TICKET SET servico_id, hide_ticket  WHERE funcionario_id :: ** iQueue_Script_populacao_utilizador **
+
+10 - EstatisticasFill
+
+
+AUX - dropUsers(Connection) :: ** iQueue_Script_populacao_utilizador **
+AUX - UPDATE_PRIVILEGIOS    :: ** iQueue_Script_populacao_utilizador **
