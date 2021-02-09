@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:rating="clr-namespace:Syncfusion.SfRating.XForms;assembly=Syncfusion.SfRating.XForms"
+             mc:Ignorable="d"
+             x:Class="SmartTicketApplication.ProfilePage">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#1A253F" VerticalOptions="Fill">
+
+            <StackLayout VerticalOptions="CenterAndExpand">
+                <Label Text="Reputação Atual" TextColor="Silver" FontSize="25" HorizontalOptions="Center" HorizontalTextAlignment="Center"/>
+                <rating:SfRating x:Name="estrelas" ItemCount="5" Precision="Exact" ReadOnly="True" HorizontalOptions="Center" ItemSize="30">
+                    <rating:SfRating.RatingSettings>
+                        <rating:SfRatingSettings RatedFill="#dbac00" UnRatedFill="White" RatedStrokeWidth="3" UnRatedStrokeWidth="2" RatedStroke="Black"/>
+                    </rating:SfRating.RatingSettings>
+                </rating:SfRating>
+                <Entry x:Name="numeroUtilizador" IsReadOnly="True"  HorizontalTextAlignment="Center" BackgroundColor="Silver" Margin="50,0,50,0" HorizontalOptions="Fill"/>
+                <Button x:Name="editButton" Text="Editar Conta" Clicked="editButton_Clicked"   BackgroundColor="Silver" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Margin="50,0,50,0" />
+                <Button x:Name="removeButton" Text="Remover Conta" Clicked="removeButton_Clicked" BackgroundColor="Silver" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Margin="50,0,50,0" />
+
+
+            </StackLayout>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

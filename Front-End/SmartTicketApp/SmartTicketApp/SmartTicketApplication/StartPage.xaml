@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="SmartTicketApplication.StartPage">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#1A253F">
+            <Image x:Name="iconImage"  HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+
+
+            <Button x:Name="LoginButton" Text="Login" Clicked="LoginButton_Clicked" Margin="0,10,0,0" VerticalOptions="End"/>
+            <Button x:Name="RegisterButton" Text="Registrar" Clicked="RegisterButton_Clicked" Margin="0,10,0,0" VerticalOptions="End"/>
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

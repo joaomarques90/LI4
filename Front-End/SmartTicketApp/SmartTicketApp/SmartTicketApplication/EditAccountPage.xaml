@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="SmartTicketApplication.EditAccountPage">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#1A253F" Padding="0,20,0,0">
+            <StackLayout VerticalOptions="Center" Margin="20" >
+
+                <Entry x:Name="password" IsPassword="true"  Placeholder="Password" BackgroundColor="Silver"/>
+                <Entry x:Name="ConfirmarPassword" IsPassword="true"  Placeholder="Confirmar Password" BackgroundColor="Silver"/>
+
+
+
+            </StackLayout>
+            <Button x:Name="AlterationsButton" Text="Confirmar Alterações" Clicked="AlterationsButton_Clicked"   BackgroundColor="Silver" HorizontalOptions="End" VerticalOptions="EndAndExpand" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

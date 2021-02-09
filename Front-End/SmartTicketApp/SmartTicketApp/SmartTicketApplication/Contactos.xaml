@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:rating="clr-namespace:Syncfusion.SfRating.XForms;assembly=Syncfusion.SfRating.XForms"
+             mc:Ignorable="d"
+             x:Class="SmartTicketApplication.Contactos">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Horário Abertura" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" TextColor="Black" FontSize="Medium"/>
+            <TimePicker x:Name="_timePickerAbertura" HorizontalOptions="CenterAndExpand" IsEnabled="False" TextColor="Black" 
+                    Format="T"  />
+            <Label Text="Horário Fecho" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"  TextColor="Black" FontSize="Medium"/>
+            <TimePicker x:Name="_timePickerFecho" HorizontalOptions="CenterAndExpand" IsEnabled="False" TextColor="Black"
+                    Format="T" />
+            <Label Text="Reputação minima" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" TextColor="Black" FontSize="Medium"/>
+            <rating:SfRating x:Name="estrelas" ItemCount="5" Precision="Exact" ReadOnly="True" HorizontalOptions="Center" ItemSize="30">
+                <rating:SfRating.RatingSettings>
+                    <rating:SfRatingSettings RatedFill="#dbac00" UnRatedFill="White" RatedStrokeWidth="3" UnRatedStrokeWidth="2" RatedStroke="Black"/>
+                </rating:SfRating.RatingSettings>
+            </rating:SfRating>
+            <Label x:Name="Email" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" TextColor="Black" FontSize="Medium"/>
+            <Label x:Name="Telefone" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" TextColor="Black" FontSize="Medium"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             x:Class="SmartTicketApplication.MapPage">
+    
+
+   
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <maps:Map x:Name="locationsMap" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+        </Grid>
+        <Grid Grid.Row="1">
+            <StackLayout Orientation="Horizontal">
+                <Button x:Name="Filtrar" Text="Filtrar" Clicked="Filtrar_Clicked"/>
+                <SearchBar x:Name="searchBar" Placeholder="Procurar Serviços" SearchButtonPressed="SearchBar_SearchButtonPressed"/>
+            </StackLayout>
+        </Grid>
+        <Grid Grid.Row="2">
+            <ListView x:Name="servicosListView" ItemSelected="servicosListView_ItemSelected" IsPullToRefreshEnabled="True" Refreshing="ServicosListView_OnRefreshing">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding NomeServico}" Detail="{Binding Address}" />
+
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Grid>
+        
+    </Grid>
+
+
+</ContentPage>

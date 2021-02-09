@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:SmartTicketApplication"
+             xmlns:forms="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"   
+             mc:Ignorable="d"
+             x:Class="SmartTicketApplication.HistoricoDiario">
+
+    <ScrollView>
+        <StackLayout Orientation="Vertical" Padding="20,0,20,0" BackgroundColor="White">
+            <Label HorizontalOptions="CenterAndExpand" Text="Congestão Semanal" Padding="0,0,0,20"/>
+            <forms:ChartView x:Name="Chart1"  
+                               HeightRequest="210" Visual="Material" VerticalOptions="FillAndExpand"/>
+            <Label HorizontalOptions="CenterAndExpand" VerticalOptions="End" Text="Tempo Médio de Atendimento Semanal" Padding="0,0,0,20"/>
+            <forms:ChartView x:Name="Chart2"  
+                               HeightRequest="210" Visual="Material" VerticalOptions="FillAndExpand"/>
+            <Label HorizontalOptions="CenterAndExpand" VerticalOptions="End"  Text="Tempo Médio de Espera Semanal" Padding="0,0,0,20"/>
+            <forms:ChartView x:Name="Chart3"  
+                               HeightRequest="210" Visual="Material" VerticalOptions="FillAndExpand" />
+            <Label HorizontalOptions="CenterAndExpand" Text="Congestão Mensal" VerticalOptions="End"  Padding="0,0,0,20"/>
+            <forms:ChartView x:Name="Chart4"  
+                               HeightRequest="210" Visual="Material" VerticalOptions="FillAndExpand"/>
+            <Label HorizontalOptions="CenterAndExpand" Text="Tempo Médio de Atendimento Mensal"  VerticalOptions="End"  Padding="0,0,0,20"/>
+            <forms:ChartView x:Name="Chart5"  
+                               HeightRequest="210" Visual="Material" VerticalOptions="FillAndExpand"/>
+            <Label HorizontalOptions="CenterAndExpand" Text="Tempo Médio de Espera mensal" Padding="0,0,0,20"/>
+            <forms:ChartView x:Name="Chart6"  
+                               HeightRequest="210" Visual="Material" VerticalOptions="FillAndExpand"/>
+            <Label HorizontalOptions="CenterAndExpand" Text="Congestão Anual" Padding="0,0,0,20"/>
+            <forms:ChartView x:Name="Chart7"  
+                               HeightRequest="210" Visual="Material" VerticalOptions="FillAndExpand"/>
+            <Label HorizontalOptions="CenterAndExpand" Text="Tempo Médio de Atendimento Anual" Padding="0,0,0,20"/>
+            <forms:ChartView x:Name="Chart8"  
+                               HeightRequest="210" Visual="Material" VerticalOptions="FillAndExpand"/>
+            <Label HorizontalOptions="CenterAndExpand" Text="Tempo Médio de Espera Anual" Padding="0,0,0,20" />
+            <forms:ChartView x:Name="Chart9"  
+                               HeightRequest="210" Visual="Material" VerticalOptions="FillAndExpand"/>
+            <Label HorizontalOptions="CenterAndExpand" Text="Tempo médio de atendimento mensal" Padding="0,20,0,20" TextColor="White"/>
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>

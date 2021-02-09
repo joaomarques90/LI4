@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:rating="clr-namespace:Syncfusion.SfRating.XForms;assembly=Syncfusion.SfRating.XForms"
+             mc:Ignorable="d"
+             x:Class="SmartTicketApplication.HorarioAtendimento">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Horário Abertura" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"/>
+            <TimePicker x:Name="_timePickerAbertura" HorizontalOptions="CenterAndExpand" 
+                    Format="T"
+                    PropertyChanged="_timePickerAbertura_PropertyChanged" />
+            <Label Text="Horário Fecho" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"/>
+            <TimePicker x:Name="_timePickerFecho" HorizontalOptions="CenterAndExpand"
+                    Format="T"
+                    PropertyChanged="_timePickerFecho_PropertyChanged" />
+            <Label Text="Ativar/Desativar serviço:" FontSize="15"/>
+            <Switch x:Name="switchServico" VerticalOptions="Start"
+                    HorizontalOptions="EndAndExpand"
+                    Toggled="switch_Toggled" />
+            <Label Text="Ajuste a reputação minima" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" />
+            <rating:SfRating x:Name="estrelas" ItemCount="5" Precision="Exact"  HorizontalOptions="Center" ItemSize="30" ValueChanged="estrelas_ValueChanged">
+                <rating:SfRating.RatingSettings>
+                    <rating:SfRatingSettings RatedFill="#dbac00" UnRatedFill="White" RatedStrokeWidth="3" UnRatedStrokeWidth="2" RatedStroke="Black"/>
+                </rating:SfRating.RatingSettings>
+            </rating:SfRating>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

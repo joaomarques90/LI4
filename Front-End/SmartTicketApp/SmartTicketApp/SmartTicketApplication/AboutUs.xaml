@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="SmartTicketApplication.AboutUs">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#1A253F" VerticalOptions="Fill">
+            <Entry x:Name="aboutUs" Text="About Us" HorizontalOptions="Center" TextColor="White" BackgroundColor="#1A253F" FontSize="40"/>
+
+
+
+            <Label Text="Smart Ticket Management" HorizontalOptions="Center" Margin="0,150,0,0" FontSize="18" TextColor="White" HorizontalTextAlignment="Center"/>
+            <Label Text="Versão 1.0.1-20435" HorizontalOptions="Center"   FontSize="18" TextColor="White" HorizontalTextAlignment="Center"/>
+            <Label Text="Copyright 2020, IQueue,Inc." HorizontalOptions="Center" Margin="0,20,0,0" FontSize="18" TextColor="White" HorizontalTextAlignment="Center"/>
+            <Label Text="Todos os Direitos Reservados." HorizontalOptions="Center"  FontSize="18" TextColor="White" HorizontalTextAlignment="Center"/>
+
+            <Button x:Name="aboutUsButton" Text="Alguma dúvida? Contacte-nos!" Clicked="aboutUsButton_Clicked" TextColor="White" BorderColor="White" BorderWidth="2" BackgroundColor="#1A253F" HorizontalOptions="End" VerticalOptions="EndAndExpand"/>
+
+
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

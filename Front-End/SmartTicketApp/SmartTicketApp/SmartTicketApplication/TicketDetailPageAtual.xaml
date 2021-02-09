@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage Padding="20" Title="{Binding Estabelecimento}"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="SmartTicketApplication.TicketDetailPageAtual">
+    <StackLayout>
+        <Label Text="{Binding Servico}" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" TextColor="Black" FontSize="Medium"/>
+        <Label Text="{Binding Data}" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" TextColor="Black" FontSize="Medium"/>
+        <Label Text="{Binding Nr_Acesso}" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" TextColor="Black" FontSize="Medium" />
+        <Label Text="{Binding Nr_Atual}" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" TextColor="Black" FontSize="Medium"/>
+        <Button x:Name="Cancel" Text="Cancelar Ticket" HorizontalOptions="End" VerticalOptions="EndAndExpand" TextColor="Red" Clicked="CancelButton_Clicked"/>
+    </StackLayout>
+</ContentPage>

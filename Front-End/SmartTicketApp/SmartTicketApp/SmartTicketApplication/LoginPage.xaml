@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="SmartTicketApplication.LoginPage">
+
+    <Grid BackgroundColor="#1A253F">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="200"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <StackLayout VerticalOptions="Center" Margin="20" >
+                <Entry  x:Name="email" Placeholder="Número de Telemóvel"  Keyboard="Numeric" BackgroundColor="Silver" Margin="0,100,0,0"/>
+                <Entry x:Name="password" IsPassword="true"  Placeholder="Password" BackgroundColor="Silver"/>
+            </StackLayout>
+        </Grid>
+        <Grid Grid.Row="1">
+            <StackLayout VerticalOptions="Center" Margin="20" >
+
+            </StackLayout>
+        </Grid>
+        <Grid Grid.Row="2" >
+            <Button x:Name="LoginButtonUtilizador" Text="Login Utilizador" Clicked="LoginButton_Clicked"   BackgroundColor="Silver" HorizontalOptions="End" VerticalOptions="EndAndExpand" />
+
+        </Grid>
+        <Grid Grid.Row="3">
+            <Button x:Name="LoginButtonFuncionario" Text="Login Funcionário" Clicked="LoginButtonFuncionario_Clicked"   BackgroundColor="Silver" HorizontalOptions="End" VerticalOptions="EndAndExpand" />
+        </Grid>
+    </Grid>
+
+</ContentPage>

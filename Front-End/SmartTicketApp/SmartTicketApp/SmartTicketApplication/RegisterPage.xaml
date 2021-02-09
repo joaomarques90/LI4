@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="SmartTicketApplication.RegisterPage">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#1A253F" Padding="0,20,0,0">
+            <StackLayout VerticalOptions="Center" Margin="20" >
+                <Entry  x:Name="email" Placeholder="Número de Telemóvel"  Keyboard="Numeric" BackgroundColor="Silver" Margin="0,100,0,0" />
+                <Entry x:Name="password" IsPassword="true"  Placeholder="Password" BackgroundColor="Silver"/>
+                <Entry x:Name="ConfirmarPassword" IsPassword="true"  Placeholder="Confirmar Password" BackgroundColor="Silver"/>
+            </StackLayout>
+            <Button x:Name="RegisterButton" Text="Registrar" Clicked="RegisterButton_Clicked"   BackgroundColor="Silver" HorizontalOptions="End" VerticalOptions="EndAndExpand" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

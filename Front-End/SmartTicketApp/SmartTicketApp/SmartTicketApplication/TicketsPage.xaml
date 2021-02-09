@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             x:Class="SmartTicketApplication.TicketsPage">
+
+
+
+    <ContentPage.Content>
+        <ListView x:Name="TicketlistView" ItemSelected="TicketlistView_ItemSelected" IsPullToRefreshEnabled="True" Refreshing="TicketlistView_OnRefreshing" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding nomeServico}" Detail="{Binding nr_acesso}" />
+
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        
+    </ContentPage.Content>
+
+</ContentPage>

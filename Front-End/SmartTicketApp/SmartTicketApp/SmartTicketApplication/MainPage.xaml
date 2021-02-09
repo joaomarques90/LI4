@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="SmartTicketApplication.MainPage">
+    <MasterDetailPage.Master>
+        <ContentPage Title="Menu" BackgroundColor="#1A253F">
+            <StackLayout Orientation="Vertical">
+                <ScrollView VerticalOptions="Start">
+                    <StackLayout Orientation="Vertical" BackgroundColor="#1A253F">
+                        <StackLayout Orientation="Vertical">
+                            <StackLayout Orientation="Horizontal" Margin="5,50,5,5"
+BackgroundColor="#1A253F" HorizontalOptions="FillAndExpand">
+                                <Image x:Name="brandImage" VerticalOptions="Center" />
+
+                                <StackLayout Orientation="Vertical">
+                                    <Label Text="IQueue" HorizontalTextAlignment="Start" FontSize="Large"
+Margin="2,0,0,0" HorizontalOptions="Start" VerticalOptions="EndAndExpand" TextColor="White"/>
+                                    <Label Text="Smart ticket management" HorizontalTextAlignment="Start"
+FontSize="Small" Margin="2,0,0,0" HorizontalOptions="Start"
+VerticalOptions="StartAndExpand"
+TextColor="White" />
+                                </StackLayout>
+                            </StackLayout>
+
+                            <StackLayout BackgroundColor="Black"
+MinimumHeightRequest="1" Orientation="Vertical"
+HeightRequest="1"
+HorizontalOptions="FillAndExpand">
+                                <Label Text="fff" FontSize="1" TextColor="White"
+BackgroundColor="Black"
+HorizontalOptions="CenterAndExpand" />
+                            </StackLayout>
+                        </StackLayout>
+
+                        <ListView x:Name="navigationList" Margin="0" SeparatorVisibility="Default"
+VerticalOptions="Start" ItemTapped="Item_Tapped" >
+
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <ViewCell>
+                                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand"
+VerticalOptions="Center">
+
+                                            <Image Source="option_pointer.png"
+HorizontalOptions="Start"
+VerticalOptions="Center" Margin="15,0,5,2"
+HeightRequest="25"
+WidthRequest="25"/>
+                                            <Label Text="{Binding OptionName}" FontAttributes="Bold"
+FontSize="Default" Margin="10,0,5,2"
+HorizontalOptions="Start" VerticalOptions="Center"
+TextColor="White"/>
+
+                                        </StackLayout>
+                                    </ViewCell>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </StackLayout>
+                </ScrollView>
+            </StackLayout>
+        </ContentPage>
+    </MasterDetailPage.Master>
+
+    <MasterDetailPage.Detail>
+        <ContentPage>
+            <Label Text="Welcome to IQueue" FontSize="Large"/>
+        </ContentPage>
+    </MasterDetailPage.Detail>
+
+    </MasterDetailPage>
